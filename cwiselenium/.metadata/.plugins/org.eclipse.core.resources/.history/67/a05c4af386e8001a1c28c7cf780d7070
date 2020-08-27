@@ -1,0 +1,37 @@
+package br.com.cwi.selenium.driver.builder;
+
+import br.com.cwi.selenium.driver.CwiSeleniumDriverLoader;
+
+
+public class CwiSeleniumDriverBuilder implements ICwiSeleniumDriverBuilder {
+
+	private String navegador;
+	private String host;
+	
+	public CwiSeleniumDriverBuilder navegador( String navegador) {
+		
+		this.navegador = navegador;
+				
+		return this;		
+	}
+	
+	public CwiSeleniumDriverBuilder host( String host) {
+		
+		this.host = host;
+				
+		return this;		
+	}
+	
+	public CwiSeleniumDriverLoader build() {
+		
+		if ( host == null || host.trim().isEmpty()) {
+			
+			return new CwiSeleniumLocalDriverBuilder(navegador).build();
+		}
+		else
+		{
+			return new CwiSeleniumRemoteDriverBuilder(navegador, host).build();
+		}
+	
+	}
+}

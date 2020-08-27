@@ -1,0 +1,17 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cwi</groupId>
+  <artifactId>cwi</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <properties>
+  	<selenium.version>3.141.59</selenium.version>  
+  	<cucumber.version>1.2.5</cucumber.version>
+  	<junit.version>4.12</junit.version>	
+  </properties>
+  <modules>
+  	<module>cwi-selenium</module>
+  	<module>cwi-getnet</module>
+  </modules>
+</project>

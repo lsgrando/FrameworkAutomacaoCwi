@@ -1,0 +1,41 @@
+package br.com.cwi.po;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import br.com.cwi.selenium.pageobject.AbstractCwiPageObject;
+import br.com.cwi.selenium.utils.PropertiesUtil;
+
+public class TesteGetNetPageObject extends AbstractCwiPageObject{
+	
+	private static final By btnPesquisar = By.id("search-trigger");
+	private static final By btnProcurar = By.className("o-btn o-btn--cor-roxo-borda c-search-box__button");
+	private static final By dsPesquisaGlobal = By.id("global-search-input");
+	
+	
+	public void acessarPagina() {
+		
+		get(PropertiesUtil.get("cwi.automacao.url"));
+		wait.until( ExpectedConditions.elementToBeClickable(btnPesquisar));
+				
+	}
+	
+	public void clicarBotaoPesquisa() {
+		
+		findElement(btnPesquisar).click();
+	}
+	
+	public void preecherCampoPesquisa(String dado) {
+		
+		findElement(dsPesquisaGlobal).sendKeys(dado);
+	}
+	
+   public void clicarBotaoProcurar() {
+		
+		findElement(btnProcurar).click();
+	}
+	
+	
+
+}

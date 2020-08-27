@@ -1,0 +1,9 @@
+#Arquivo de Configuração do Framework de Teste CWI-Sorftware
+#Navegador utilizado para execução do teste (firefox ou chrome)
+cwi.selenium.navegador=firefox
+#Url Base para a escução dos testes
+cwi.automacao.url=https://site.getnet.com.br/
+#Caminho do ChromeDriver
+cwi.selenium.caminho.chromedriver=
+#Caminho do GeckoDriver
+cwi.selenium.caminho.geckodriver=

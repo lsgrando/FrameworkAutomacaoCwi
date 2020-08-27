@@ -1,0 +1,8 @@
+package br.com.cwi.selenium.driver;
+
+import org.openqa.selenium.WebDriver;
+
+public interface CwiSeleniumDriverLoader {
+	
+		WebDriver load();
+}

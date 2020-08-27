@@ -1,0 +1,14 @@
+package br.com.cwi.selenium.desiredcapabilities;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class CwiSeleniumGoogleChromeDesiredCapabilities implements CwiSeleniumDesiredCapabilities {
+
+	public DesiredCapabilities load() {
+		
+		DesiredCapabilities dc = DesiredCapabilities.chrome();
+		dc.setJavascriptEnabled(true);
+		
+		return dc;
+	}
+}

@@ -1,0 +1,52 @@
+package br.com.cwi.selenium.support;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import br.com.cwi.selenium.driver.builder.CwiSeleniumDriverBuilder;
+
+public class CwiWebDriver {
+
+    private static final int DEFAULT_SLEEP_TIMEOUT = 30;
+
+    private static WebDriver driver;
+    private static WebDriverWait wait;
+
+    public static WebDriver getDriver() {
+
+        if ( driver == null ) {
+
+            createWebDriver();
+        }
+
+        return driver;
+    }
+
+    public static void close() {
+
+        if ( driver != null ) {
+
+            driver.quit();
+
+            driver = null;
+        }
+    }
+    
+    public static WebDriverWait getWait() {
+        return wait;
+    }
+
+    private static void createWebDriver() {
+
+        try {
+
+            driver = (WebDriver) new CwiSeleniumDriverBuilder().build();
+            wait = new WebDriverWait( driver, DEFAULT_SLEEP_TIMEOUT );
+
+        } finally {
+
+           driver.close();
+        }
+    }
+}
+

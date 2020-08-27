@@ -1,0 +1,15 @@
+package br.com.cwi.runner;
+
+import org.junit.runner.RunWith;
+
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		         features="src\\test\\java\\br\\com\\cwi\\teste\\pesquisa.feature",
+                 glue={"src\\main\\java\\br\\com\\cwi\\stepdefinition"}
+                 )	
+public class Runner {	
+
+}

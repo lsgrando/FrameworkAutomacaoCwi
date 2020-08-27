@@ -1,0 +1,31 @@
+package br.com.cwi.stepdefinition;
+
+import org.junit.After;
+
+import br.com.cwi.po.TesteGetNetPageObject;
+import br.com.cwi.selenium.pageobject.AbstractCwiPageObject;
+import br.com.cwi.selenium.support.CwiWebDriver;
+import cucumber.api.java.pt.Dado;
+
+public class PesquisaGetNetStepDefinitions extends AbstractCwiPageObject {
+	
+	private TesteGetNetPageObject testeGetNet;
+
+	@After
+    public void afterScenario() {
+
+        CwiWebDriver.getDriver().close();
+    }
+	
+	public PesquisaGetNetStepDefinitions() {
+		
+		testeGetNet = new TesteGetNetPageObject();
+	}
+	
+	@Dado("^que acessei a pagina\\.$")
+	public void que_acessei_a_pagina() {
+	    
+		testeGetNet.acessarPagina();
+	}
+
+}

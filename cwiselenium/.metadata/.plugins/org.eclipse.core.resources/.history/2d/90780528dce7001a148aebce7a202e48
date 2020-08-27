@@ -1,0 +1,22 @@
+package br.com.cwi.selenium.driver.builder;
+
+import br.com.cwi.selenium.driver.CwiSeleniumDriverLoader;
+
+public class CwiSeleniumRemoteDriverBuilder implements ICwiSeleniumDriverBuilder {
+
+	private String navegador;
+	private String host;
+	
+	public CwiSeleniumRemoteDriverBuilder(String navegador, String host) {
+		
+		this.navegador = navegador;
+		this.host = host;	
+
+	}
+	
+	@Override
+	public CwiSeleniumDriverLoader build() {
+		
+		return new CwiSeleniumRemoteDriver(host, dc)
+	}
+}

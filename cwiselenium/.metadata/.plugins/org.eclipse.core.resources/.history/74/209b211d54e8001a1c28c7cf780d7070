@@ -1,0 +1,18 @@
+package br.com.cwi.po;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import br.com.cwi.selenium.pageobject.AbstractCwiPageObject;
+import br.com.cwi.selenium.utils.PropertiesUtil;
+
+public class TesteGetNetPageObject extends AbstractCwiPageObject{
+	
+	public void acessarPagina() {
+		
+		get(PropertiesUtil.get("cwi.automacao.url"));
+		wait.until( ExpectedConditions.visibilityOfElementLocated( By.className("c-menu-trigger__content") ) );
+	}
+
+}

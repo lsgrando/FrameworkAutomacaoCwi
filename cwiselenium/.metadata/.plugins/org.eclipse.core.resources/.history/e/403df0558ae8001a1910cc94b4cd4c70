@@ -1,0 +1,8 @@
+package br.com.cwi.selenium.driver.builder;
+
+import br.com.cwi.selenium.driver.CwiSeleniumDriverLoader;
+
+public interface ICwiSeleniumDriverBuilder {
+
+	CwiSeleniumDriverLoader build();
+}

@@ -1,0 +1,19 @@
+package br.com.cwi.selenium.driver;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.ProfilesIni;
+
+public class CwiSeleniumFirefoxDriver implements CwiSeleniumDriverLoader {
+
+	@Override
+    public WebDriver load() {
+
+        System.setProperty("webdriver.gecko.driver", "C:/Drivers/marionette/geckodriver.exe");
+
+        ProfilesIni allProfiles = new ProfilesIni();
+        FirefoxProfile profile = allProfiles.getProfile("Selenium");
+
+        return null;//new FirefoxDriver(profile);
+    }
+}

@@ -1,0 +1,17 @@
+package br.com.cwi.selenium.support;
+
+public class CwiWebDriverShurdown implements Runnable {
+
+    public void run() {
+        
+    	close();
+    }
+
+    /**
+     * Fecha o navegador.
+     */
+    private static void close() {
+
+        CwiWebDriver.close();
+    }
+}
