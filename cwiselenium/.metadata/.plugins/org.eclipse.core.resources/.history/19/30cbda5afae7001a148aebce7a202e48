@@ -1,5 +1,0 @@
-package br.com.cwi.selenium.pageobject;
-
-public class AbstractCwiPageObject {
-
-}

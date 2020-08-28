@@ -1,9 +1,0 @@
-package br.com.cwi.selenium.desiredcapabilities;
-
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-public interface CwiSeleniumDesiredCapabilities {
-
-	DesiredCapabilities load();
-	
-}

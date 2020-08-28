@@ -1,5 +1,0 @@
-package br.com.cwi.selenium.driver.builder;
-
-public class CwiSeleniumRemoteDriverBuilder {
-
-}
